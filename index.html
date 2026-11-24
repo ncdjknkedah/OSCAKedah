@@ -1,0 +1,673 @@
+<!DOCTYPE html>
+<html lang="ms">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Hub Rujukan Rawatan Ketagihan di Klinik Kesihatan | OSCA Negeri Kedah</title>
+<meta name="description" content="Hub rujukan pelaksanaan One Stop Centre for Addiction (OSCA) di klinik kesihatan Negeri Kedah.">
+<style>
+:root{
+  --ink:#16202b; --ink2:#4a5866; --line:#dfe5ea; --bg:#f4f6f8; --card:#fff;
+  --brand:#0d4d5c; --brand2:#127082; --tint:#e6f1f3; --accent:#c2410c; --accentT:#fdf1ea;
+  --k1:#15803d; --k1t:#e8f5ec; --k2:#b91c1c; --k2t:#fbeaea; --k3:#1d4ed8; --k3t:#e9effc; --k4:#7e22ce; --k4t:#f3ebfb;
+  --r:10px; --sh:0 1px 2px rgba(16,32,43,.06),0 2px 8px rgba(16,32,43,.05);
+}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{margin:0;font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Arial,sans-serif;color:var(--ink);background:var(--bg);line-height:1.55;font-size:16px}
+a{color:var(--brand2)}
+header.top{background:var(--brand);color:#fff}
+.top-in{max-width:1120px;margin:0 auto;padding:18px 20px 22px;display:flex;gap:18px;align-items:center}
+.logo{display:flex;align-items:center;gap:12px;flex-shrink:0}
+.logo img{width:76px;height:auto;background:#fff;border-radius:8px;padding:4px}
+.logo .org{font-size:12px;font-weight:700;letter-spacing:.04em;line-height:1.35;opacity:.95}
+.ttl{border-left:1px solid rgba(255,255,255,.3);padding-left:18px}
+.ttl h1{margin:0;font-size:22px;line-height:1.25}
+.ttl p{margin:4px 0 0;opacity:.85;font-size:14px}
+nav.tabs{position:sticky;top:0;z-index:10;background:#fff;border-bottom:1px solid var(--line);box-shadow:var(--sh)}
+.tabs-in{max-width:1120px;margin:0 auto;display:flex;gap:2px;overflow-x:auto;padding:0 12px;scrollbar-width:none}
+.tabs-in::-webkit-scrollbar{display:none}
+.tabs a{flex-shrink:0;padding:13px 14px;text-decoration:none;color:var(--ink2);font-weight:600;font-size:14.5px;border-bottom:3px solid transparent;white-space:nowrap}
+.tabs a.on{color:var(--brand);border-bottom-color:var(--brand)}
+.tabs a:hover{color:var(--brand)}
+main{max-width:1120px;margin:0 auto;padding:24px 20px 60px}
+section.pg{display:none}
+section.pg.on{display:block;animation:fd .2s ease}
+@keyframes fd{from{opacity:.4}to{opacity:1}}
+h2{font-size:24px;margin:0 0 6px;color:var(--brand)}
+h3{font-size:18px;margin:28px 0 10px}
+.lead{color:var(--ink2);margin:0 0 20px;max-width:780px}
+.grid{display:grid;gap:14px}
+.g2{grid-template-columns:repeat(auto-fit,minmax(300px,1fr))}
+.g3{grid-template-columns:repeat(auto-fit,minmax(240px,1fr))}
+.g4{grid-template-columns:repeat(auto-fit,minmax(200px,1fr))}
+.card{background:var(--card);border:1px solid var(--line);border-radius:var(--r);padding:16px 18px;box-shadow:var(--sh)}
+.card h4{margin:0 0 6px;font-size:16px}
+.card p{margin:0;color:var(--ink2);font-size:15px}
+.card ul,.card ol{margin:6px 0 0;padding-left:20px;color:var(--ink2);font-size:15px}
+.stat{font-size:32px;font-weight:800;color:var(--brand);line-height:1.1}
+.stat small{display:block;font-size:13px;font-weight:600;color:var(--ink2);margin-top:4px}
+.qa{display:flex;flex-wrap:wrap;gap:10px;margin:4px 0 8px}
+.btn{display:inline-flex;align-items:center;gap:8px;padding:10px 16px;border-radius:8px;font-weight:700;font-size:14.5px;text-decoration:none;border:1px solid var(--brand);color:var(--brand);background:#fff;cursor:pointer}
+.btn.pri{background:var(--brand);color:#fff}
+.btn.dis{opacity:.55;cursor:not-allowed;border-style:dashed}
+.btn:hover:not(.dis){filter:brightness(1.08)}
+.pill{display:inline-block;font-size:12px;font-weight:700;padding:2px 8px;border-radius:99px;background:var(--tint);color:var(--brand)}
+.note{background:var(--accentT);border-left:4px solid var(--accent);padding:10px 14px;border-radius:6px;font-size:14.5px;color:#7c2d12;margin:14px 0}
+.info{background:var(--tint);border-left:4px solid var(--brand2);padding:10px 14px;border-radius:6px;font-size:14.5px;margin:14px 0}
+table{width:100%;border-collapse:collapse;background:#fff;font-size:14.5px}
+th,td{border:1px solid var(--line);padding:8px 10px;text-align:left;vertical-align:top}
+th{background:var(--tint);color:var(--brand);font-weight:700}
+td.c,th.c{text-align:center}
+.tw{overflow-x:auto;border-radius:var(--r);border:1px solid var(--line);box-shadow:var(--sh)}
+.tw table{border:0}
+.tw th:first-child,.tw td:first-child{border-left:0}.tw th:last-child,.tw td:last-child{border-right:0}
+.tw tr:first-child th{border-top:0}.tw tr:last-child td{border-bottom:0}
+/* pillars */
+.pil{border-top:4px solid var(--brand2)}
+.pil .ic{font-size:22px}
+/* criteria */
+.kr{border-radius:var(--r);padding:16px 18px;border:1px solid var(--line);background:#fff;box-shadow:var(--sh)}
+.kr h4{margin:0 0 2px;font-size:16px}
+.kr .act{font-weight:800;font-size:14px;margin-bottom:8px}
+.kr ol{margin:0;padding-left:20px;font-size:14.5px;color:var(--ink2)}
+.kr.k1{border-top:5px solid var(--k1)}.kr.k1 .act{color:var(--k1)}
+.kr.k2{border-top:5px solid var(--k2)}.kr.k2 .act{color:var(--k2)}
+.kr.k3{border-top:5px solid var(--k3)}.kr.k3 .act{color:var(--k3)}
+.kr.k4{border-top:5px solid var(--k4)}.kr.k4 .act{color:var(--k4)}
+/* flow */
+.flow{display:flex;flex-direction:column;gap:0;margin:10px 0}
+.step{display:flex;gap:12px;align-items:flex-start;position:relative;padding-bottom:14px}
+.step:not(:last-child)::before{content:"";position:absolute;left:15px;top:32px;bottom:0;width:2px;background:var(--line)}
+.step .n{flex-shrink:0;width:32px;height:32px;border-radius:50%;background:var(--brand);color:#fff;font-weight:800;display:flex;align-items:center;justify-content:center;font-size:14px}
+.step .t{padding-top:5px;font-size:15px}
+.step .t b{display:block}
+.step .br{display:flex;flex-wrap:wrap;gap:8px;margin-top:6px}
+.tag{display:inline-block;line-height:1.4;max-width:100%;font-size:12.5px;font-weight:700;padding:3px 9px;border-radius:6px;background:#eef1f4;color:var(--ink2)}
+.tag.ya{background:var(--k1t);color:var(--k1)}.tag.tk{background:var(--k2t);color:var(--k2)}
+details.acc{background:#fff;border:1px solid var(--line);border-radius:var(--r);margin-bottom:10px;box-shadow:var(--sh)}
+details.acc summary{cursor:pointer;padding:14px 18px;font-weight:700;list-style:none;display:flex;justify-content:space-between;align-items:center;gap:10px}
+details.acc summary::-webkit-details-marker{display:none}
+details.acc summary::after{content:"+";font-size:20px;color:var(--brand2);font-weight:400}
+details.acc[open] summary::after{content:"–"}
+details.acc .bd{padding:0 18px 16px;color:var(--ink2);font-size:15px}
+details.acc .bd ul,details.acc .bd ol{margin:4px 0;padding-left:20px}
+/* tools */
+.tool{background:#fff;border:1px solid var(--line);border-radius:var(--r);padding:18px;box-shadow:var(--sh)}
+.tool label{display:block;font-weight:600;font-size:14.5px;margin:10px 0 4px}
+.tool select{width:100%;padding:9px 10px;border:1px solid var(--line);border-radius:8px;font-size:15px;background:#fff;color:var(--ink)}
+.res{margin-top:14px;padding:14px;border-radius:8px;background:var(--tint)}
+.res .sc{font-size:28px;font-weight:800}
+.res.lo{background:var(--k1t)}.res.lo .sc{color:var(--k1)}
+.res.md{background:#fff6e0}.res.md .sc{color:#a16207}
+.res.hi{background:var(--k2t)}.res.hi .sc{color:var(--k2)}
+.tool label.chk,.chk{display:flex;margin:0;font-weight:400;gap:10px;align-items:flex-start;padding:8px 0;border-bottom:1px solid var(--line);font-size:15px;cursor:pointer}
+.chk input{margin-top:4px;width:18px;height:18px;accent-color:var(--brand)}
+.chk .dom{font-size:11.5px;font-weight:700;color:var(--brand2);text-transform:uppercase;letter-spacing:.04em}
+/* resources */
+.search{width:100%;padding:12px 14px;border:1px solid var(--line);border-radius:10px;font-size:16px;margin:4px 0 14px;background:#fff}
+.res-list{display:grid;gap:10px}
+.ri{display:flex;gap:14px;align-items:center;background:#fff;border:1px solid var(--line);border-radius:var(--r);padding:12px 14px;text-decoration:none;color:var(--ink);box-shadow:var(--sh)}
+.ri:hover{border-color:var(--brand2)}
+.ri .ty{flex-shrink:0;width:46px;height:46px;border-radius:8px;display:flex;align-items:center;justify-content:center;font-size:11px;font-weight:800;color:#fff}
+.ty.pdf{background:#b91c1c}.ty.ppt{background:#c2410c}.ty.vid{background:#7e22ce}.ty.dir{background:#0d4d5c}.ty.xls{background:#15803d}
+.ri .tx b{display:block;font-size:15px}
+.ri .tx span{font-size:13.5px;color:var(--ink2)}
+.grp{margin:22px 0 10px;display:flex;align-items:baseline;gap:10px;flex-wrap:wrap}
+.grp h3{margin:0}
+.empty{display:none;color:var(--ink2);padding:20px;text-align:center}
+footer{border-top:1px solid var(--line);background:#fff;color:var(--ink2);font-size:13.5px}
+footer .in{max-width:1120px;margin:0 auto;padding:18px 20px}
+@media (max-width:700px){
+  .tw table{min-width:560px}
+  [style*="columns"]{columns:1!important}
+  .step .br{flex-direction:column;align-items:flex-start}
+  .top-in{flex-direction:column;align-items:flex-start;gap:12px}
+  .ttl{border-left:0;padding-left:0}
+  .ttl h1{font-size:19px}
+  h2{font-size:21px}
+}
+@media print{nav.tabs,.qa,.search{display:none}section.pg{display:block!important;page-break-after:always}body{background:#fff}}
+</style>
+</head>
+<body>
+
+<header class="top">
+  <div class="top-in">
+    <div class="logo">
+      <img src="data:image/webp;base64,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" alt="Jata Negara">
+      <div class="org">KEMENTERIAN KESIHATAN MALAYSIA<br>JABATAN KESIHATAN NEGERI KEDAH</div>
+    </div>
+    <div class="ttl">
+      <h1>Hub Rujukan Rawatan Ketagihan di Klinik Kesihatan</h1>
+      <p>One Stop Centre for Addiction (OSCA) · Unit Kawalan Penyakit Tidak Berjangkit</p>
+    </div>
+  </div>
+</header>
+
+<nav class="tabs"><div class="tabs-in" id="tabs">
+  <a href="#utama">Utama</a>
+  <a href="#rujukan">Aliran Rujukan</a>
+  <a href="#penilaian">Penilaian &amp; Saringan</a>
+  <a href="#pengesahan">Pengesahan Penagih</a>
+  <a href="#rawatan">Rawatan &amp; Pengurusan</a>
+  <a href="#pasukan">Pasukan &amp; Prasarana</a>
+  <a href="#pelaporan">Pelaporan</a>
+  <a href="#bahan">Bahan Latihan</a>
+  <a href="#direktori">Direktori</a>
+</div></nav>
+
+<main>
+
+<!-- ============ UTAMA ============ -->
+<section class="pg" id="utama">
+  <h2>Perkhidmatan Sehenti Rawatan Ketagihan</h2>
+  <p class="lead">OSCA ialah model perkhidmatan pelbagai disiplin di klinik kesihatan untuk saringan, intervensi dan rawatan semua jenis penyalahgunaan dan ketagihan dadah atau bahan, termasuk nikotin, berasaskan dasar <b>"No Wrong Door"</b>.</p>
+  <div class="qa">
+    <a class="btn pri" id="btnPortal" target="_blank" rel="noopener">Portal OSCA</a>
+    <a class="btn" href="https://drive.google.com/file/d/1eel4DzM7XmITlh5_uLch_4G0ju1G8PI2/view" target="_blank" rel="noopener">Pekeliling KPK Bil. 9/2026</a>
+    <a class="btn" href="#bahan">Slaid &amp; Bahan Latihan</a>
+  </div>
+
+  <h3>OSCA dalam angka</h3>
+  <div class="grid g4">
+    <div class="card"><div class="stat">131<small>OSCA di seluruh negara (2025)</small></div></div>
+    <div class="card"><div class="stat">2<small>OSCA di Negeri Kedah</small></div></div>
+    <div class="card"><div class="stat">6,980<small>pesakit OSCA di seluruh negara</small></div></div>
+    <div class="card"><div class="stat">192,857<small>penagih &amp; penyalah guna di Malaysia (2024)</small></div></div>
+  </div>
+
+  <h3>Pendekatan biopsikososial dan spiritual</h3>
+  <div class="grid g4">
+    <div class="card pil"><div class="ic">🩺</div><h4>Biologi</h4><p>Detoksifikasi, Medication Assisted Therapy (MAT), rawatan komorbiditi perubatan dan psikiatri, rujukan pakar.</p></div>
+    <div class="card pil"><div class="ic">🧠</div><h4>Psikologi</h4><p>Motivational Enhancement Therapy, CBT, psikopendidikan, pencegahan relaps, pengurusan tekanan.</p></div>
+    <div class="card pil"><div class="ic">🤝</div><h4>Sosial</h4><p>Sokongan keluarga, kumpulan sokongan, bantuan kebajikan, pekerjaan dan integrasi semula dalam komuniti.</p></div>
+    <div class="card pil"><div class="ic">🕊️</div><h4>Spiritual</h4><p>Pengukuhan kerohanian mengikut kepercayaan pesakit bagi menyokong pemulihan jangka panjang.</p></div>
+  </div>
+
+  <h3>Substans yang diliputi</h3>
+  <p class="lead" style="margin-bottom:0">ATS (syabu, pil kuda, ekstasi) · opioid (heroin, morfin, kodein) · kanabis · ketum · inhalan · benzodiazepin dan ubat pelali · alkohol · nikotin (rokok dan vape) · NPS · ketagihan tingkah laku (judi, permainan dalam talian, internet).</p>
+
+  <h3>OSCA di Negeri Kedah</h3>
+  <div class="grid g2">
+    <div class="card"><span class="pill">Sejak 2021</span><h4 style="margin-top:8px">KK Bandar Sungai Petani</h4><p>Daerah Kuala Muda</p></div>
+    <div class="card"><span class="pill">Sejak 2022</span><h4 style="margin-top:8px">KK Kuala Kedah</h4><p>Daerah Kota Setar</p></div>
+  </div>
+  <div class="info">Perluasan OSCA ke daerah lain sedang dirancang melalui naik taraf Program Rawatan Methadone (MMT) dan Khidmat Berhenti Merokok (KBM) sedia ada di klinik kesihatan.</div>
+</section>
+
+<!-- ============ RUJUKAN ============ -->
+<section class="pg" id="rujukan">
+  <h2>Aliran Rujukan Integrasi</h2>
+  <p class="lead">Mengikut Surat Pekeliling KPK Bil. 9/2026. KKM memberi tumpuan kepada rawatan, manakala AADK melaksanakan intervensi psikososial dan pemulihan komuniti.</p>
+
+  <h3>Kriteria pelan rawatan selepas penilaian di OSCA</h3>
+  <div class="grid g4">
+    <div class="kr k1"><h4>Kriteria 1</h4><div class="act">KEKAL RAWATAN DI OSCA</div><ol><li>Dual diagnosis ringan atau sederhana, stabil emosi dan perubatan</li><li>Withdrawal ringan hingga sederhana, sesuai dipantau sebagai pesakit luar</li><li>Ada sokongan sosial</li><li>Sedia mengikuti rawatan susulan dan kaunseling</li></ol></div>
+    <div class="kr k2"><h4>Kriteria 2</h4><div class="act">RUJUK HOSPITAL</div><ol><li>Withdrawal teruk atau kompleks</li><li>Sejarah withdrawal yang rumit</li><li>Diagnosis psikiatri tidak jelas atau kecelaruan mental akut</li><li>Perlu penilaian lanjut psikiatri</li><li>Risiko tinggi (cubaan bunuh diri, psikosis teruk)</li></ol></div>
+    <div class="kr k3"><h4>Kriteria 3</h4><div class="act">RUJUK AADK</div><ol><li>Ketagihan sederhana hingga berat</li><li>Stabil mental dan emosi</li><li>Relaps berulang selepas rawatan pesakit luar</li><li>Perlu pemulihan dalam institusi atau komuniti</li><li>Sukarela, berumur ≥18 tahun</li><li>Sedia meninggalkan pekerjaan sementara (jika institusi)</li></ol></div>
+    <div class="kr k4"><h4>Kriteria 4</h4><div class="act">RUJUK PPP</div><ol><li>Ketagihan sederhana hingga berat, relaps berulang</li><li>Stabil mental dan emosi</li><li>Tiada psikiatri akut, withdrawal teruk atau penyakit kronik tidak terkawal</li><li>Perlu pemulihan dalam institusi</li><li>Tiada sokongan sosial</li><li>Sukarela, sedia meninggalkan pekerjaan sementara</li><li>Mampu menanggung kos rawatan</li></ol></div>
+  </div>
+
+  <details class="acc" style="margin-top:14px"><summary>Penjelasan Kriteria 1: siapa yang sesuai kekal di OSCA?</summary><div class="bd">
+    <p><b>Dual diagnosis ringan/sederhana:</b> SUD bersama gangguan mental ringan atau sederhana tanpa psikosis akut, contohnya kemurungan ringan hingga sederhana, gangguan kebimbangan, gangguan penyesuaian, insomnia berkaitan tekanan psikososial, atau gejala psikotik ringan yang stabil dengan ubat oral dan insight yang baik.</p>
+    <p><b>Stabil emosi dan perubatan:</b> tidak dalam intoksikasi atau withdrawal teruk, tanda vital stabil, komorbid (DM, HPT, HIV, hepatitis) terkawal atau dirawat, mampu hadir temu janji.</p>
+    <p><b>Sokongan sosial:</b> sekurang-kurangnya satu, seperti keluarga atau penjaga, pasangan atau rakan positif, majikan, NGO atau peer support, atau tempat tinggal yang stabil.</p>
+  </div></details>
+
+  <h3>Empat laluan rujukan</h3>
+  <details class="acc" open><summary>Laluan 1 · Fasiliti lain → OSCA</summary><div class="bd">
+    <div class="flow">
+      <div class="step"><div class="n">1</div><div class="t"><b>Penilaian di fasiliti asal</b>Klinik swasta, hospital kerajaan atau swasta, PPP, saringan outreach atau KK tanpa OSCA.</div></div>
+      <div class="step"><div class="n">2</div><div class="t"><b>Pesakit stabil?</b><div class="br"><span class="tag ya">Ya → rujuk OSCA</span><span class="tag tk">Tidak / kecemasan → rujuk hospital</span></div></div></div>
+      <div class="step"><div class="n">3</div><div class="t"><b>Selepas rawatan hospital</b>Jika perlu susulan pesakit luar, teruskan di klinik pakar atau rujuk ke OSCA.</div></div>
+      <div class="step"><div class="n">4</div><div class="t"><b>Penilaian menyeluruh di OSCA</b>Sejarah perubatan dan sosial, pemeriksaan fizikal, ASSIST, saringan dan diagnosis.</div></div>
+      <div class="step"><div class="n">5</div><div class="t"><b>Tentukan pelan rawatan</b>Mengikut Kriteria 1 hingga 4.</div></div>
+    </div>
+  </div></details>
+  <details class="acc"><summary>Laluan 2 · AADK → OSCA</summary><div class="bd">
+    <div class="flow">
+      <div class="step"><div class="n">1</div><div class="t"><b>Klien AADK dikesan ada gejala berisiko atau penyakit</b></div></div>
+      <div class="step"><div class="n">2</div><div class="t"><b>Stabil?</b><div class="br"><span class="tag ya">Ya → rujuk OSCA</span><span class="tag tk">Tidak / kecemasan → hospital</span></div></div></div>
+      <div class="step"><div class="n">3</div><div class="t"><b>Inpatient AADK (DAC, PUSPEN, Pusat Khidmat)</b>Daftar melalui laluan khas. Dinilai dan dirawat pada hari yang sama.</div></div>
+      <div class="step"><div class="n">4</div><div class="t"><b>Outpatient AADK</b>Diberi tarikh temu janji atau dirawat pada hari yang sama, tertakluk kepada keupayaan OSCA.</div></div>
+      <div class="step"><div class="n">5</div><div class="t"><b>Susulan</b>Perlu rawatan lanjut → temu janji OSCA. Tidak perlu → teruskan program pemulihan AADK.</div></div>
+    </div>
+  </div></details>
+  <details class="acc"><summary>Laluan 3 · OSCA → PPP / NGO berdaftar</summary><div class="bd">
+    <div class="flow">
+      <div class="step"><div class="n">1</div><div class="t"><b>MO OSCA kenal pasti pesakit yang perlukan tempat perlindungan</b></div></div>
+      <div class="step"><div class="n">2</div><div class="t"><b>Hubungi Unit Pemulihan AADK Negeri</b>Dapatkan senarai PPP atau NGO berdaftar beserta PIC.</div></div>
+      <div class="step"><div class="n">3</div><div class="t"><b>Hubungi PPP / NGO dan rujuk pesakit</b></div></div>
+    </div>
+  </div></details>
+  <details class="acc"><summary>Laluan 4 · Hospital → AADK</summary><div class="bd">
+    <div class="flow">
+      <div class="step"><div class="n">1</div><div class="t"><b>Pesakit dirawat di wad atau klinik pakar</b>Penilaian status kesihatan, tahap ketagihan dan keperluan rujukan.</div></div>
+      <div class="step"><div class="n">2</div><div class="t"><b>Perlu penilaian dan pemulihan AADK?</b><div class="br"><span class="tag ya">Ya → rujuk AADK Daerah setelah stabil</span><span class="tag">Tidak → teruskan rawatan hospital</span></div></div></div>
+      <div class="step"><div class="n">3</div><div class="t"><b>AADK Daerah buat saringan dan penilaian</b></div></div>
+      <div class="step"><div class="n">4</div><div class="t"><b>Setuju pendekatan sukarela?</b><div class="br"><span class="tag ya">Ya → pemulihan institusi atau komuniti</span><span class="tag tk">Tidak → intervensi ringkas, teruskan di hospital</span></div></div></div>
+    </div>
+  </div></details>
+
+  <h3>Bila OSCA perlu eskalasi ke hospital</h3>
+  <div class="card"><ul style="columns:2;column-gap:28px">
+    <li>Risiko withdrawal teruk (alkohol: sejarah sawan atau DT, PAWSS ≥4, &gt;20 unit/hari, umur &gt;65)</li>
+    <li>Benzodiazepin &gt;20 mg setara diazepam sehari</li>
+    <li>Psikosis ATS yang perlu pemerhatian</li>
+    <li>Niat bunuh diri berisiko tinggi</li>
+    <li>HIV rumit atau neurosifilis</li>
+    <li>Trauma kompleks</li>
+    <li>Relaps berulang yang perlu stabilisasi pesakit dalam</li>
+    <li>Tukar methadone ke buprenorfin, atau tramadol dos tinggi</li>
+  </ul></div>
+</section>
+
+<!-- ============ PENILAIAN ============ -->
+<section class="pg" id="penilaian">
+  <h2>Penilaian &amp; Saringan</h2>
+  <p class="lead">Penilaian di OSCA menggunakan Borang Penilaian OSCA 01-2026 (draf akhir) dan instrumen saringan yang disahkan.</p>
+
+  <h3>Alur penilaian</h3>
+  <div class="grid g4">
+    <div class="card"><span class="pill">1</span><h4 style="margin-top:8px">Sejarah</h4><p>Sosiodemografi, sejarah dadah kronologi, komorbid dan komplikasi, peringkat perubahan.</p></div>
+    <div class="card"><span class="pill">2</span><h4 style="margin-top:8px">Pemeriksaan</h4><p>Pemeriksaan fizikal, MSE, tanda intoksikasi dan withdrawal.</p></div>
+    <div class="card"><span class="pill">3</span><h4 style="margin-top:8px">Siasatan</h4><p>FBS, RP, LFT, saringan CVD, penyakit berjangkit, ± UDT. ASSIST, AUDIT-10.</p></div>
+    <div class="card"><span class="pill">4</span><h4 style="margin-top:8px">Diagnosis &amp; pelan</h4><p>DSM-5 SUD (ringan, sederhana, teruk) dan pilih pelan mengikut Kriteria 1 hingga 4.</p></div>
+  </div>
+
+  <details class="acc" style="margin-top:14px"><summary>Kandungan Borang Penilaian OSCA 01-2026</summary><div class="bd">
+    <ol style="columns:2;column-gap:28px">
+      <li>Personal history</li><li>Main presenting complaint</li><li>Substance/drug history in chronology (termasuk sejarah tahanan dan rawatan lepas)</li><li>Social history</li><li>Current drug use</li><li>Physical examination</li><li>Mental state examination</li><li>Features of substance withdrawal</li><li>Features of intoxication</li><li>Diagnosis</li><li>Management plan</li><li>Assessment &amp; screening: ASSIST, WHOQOL-BREF, AUDIT-10, PHQ-9, GAD-7, UDT, saringan lain (HIV, Hep C, PTB, STI, CVD)</li>
+    </ol>
+  </div></details>
+
+  <h3>Kalkulator skor ASSIST v3.1</h3>
+  <div class="grid g2">
+    <div class="tool">
+      <label for="aSub">Substans</label>
+      <select id="aSub">
+        <option value="tob">a. Tembakau (rokok, vape)</option><option value="alc">b. Arak</option><option value="can">c. Kanabis</option><option value="coc">d. Kokain</option><option value="ats">e. ATS (syabu, pil kuda, ekstasi)</option><option value="inh">f. Inhalan</option><option value="sed">g. Ubat pelali / pil tidur</option><option value="hal">h. Halusinogen</option><option value="opi">i. Opioid</option><option value="oth">j. Lain-lain (ketum, DF118)</option>
+      </select>
+      <label for="q2">S2 · 3 bulan lepas, kekerapan guna</label>
+      <select id="q2" class="aq"><option value="0">Tidak pernah</option><option value="2">Sekali atau dua kali</option><option value="3">Bulanan</option><option value="4">Mingguan</option><option value="6">Setiap hari / hampir setiap hari</option></select>
+      <label for="q3">S3 · 3 bulan lepas, keinginan kuat atau gian</label>
+      <select id="q3" class="aq"><option value="0">Tidak pernah</option><option value="3">Sekali atau dua kali</option><option value="4">Bulanan</option><option value="5">Mingguan</option><option value="6">Setiap hari / hampir setiap hari</option></select>
+      <label for="q4">S4 · 3 bulan lepas, masalah kesihatan, sosial, perundangan atau kewangan</label>
+      <select id="q4" class="aq"><option value="0">Tidak pernah</option><option value="4">Sekali atau dua kali</option><option value="5">Bulanan</option><option value="6">Mingguan</option><option value="7">Setiap hari / hampir setiap hari</option></select>
+      <div id="q5w"><label for="q5">S5 · 3 bulan lepas, gagal melakukan perkara biasa</label>
+      <select id="q5" class="aq"><option value="0">Tidak pernah</option><option value="5">Sekali atau dua kali</option><option value="6">Bulanan</option><option value="7">Mingguan</option><option value="8">Setiap hari / hampir setiap hari</option></select></div>
+      <label for="q6">S6 · Pernah orang lain risau tentang penggunaan</label>
+      <select id="q6" class="aq"><option value="0">Tidak pernah</option><option value="6">Ya, dalam 3 bulan lepas</option><option value="3">Ya, tetapi bukan dalam 3 bulan lepas</option></select>
+      <label for="q7">S7 · Pernah gagal mengurangkan penggunaan</label>
+      <select id="q7" class="aq"><option value="0">Tidak pernah</option><option value="6">Ya, dalam 3 bulan lepas</option><option value="3">Ya, tetapi bukan dalam 3 bulan lepas</option></select>
+      <div class="res" id="aRes"></div>
+    </div>
+    <div>
+      <div class="tw"><table>
+        <tr><th>Tahap risiko</th><th class="c">Arak</th><th class="c">Substans lain</th><th>Intervensi</th></tr>
+        <tr><td><b>Rendah</b></td><td class="c">0–10</td><td class="c">0–3</td><td>Nasihat kesihatan am</td></tr>
+        <tr><td><b>Sederhana</b></td><td class="c">11–26</td><td class="c">4–26</td><td>Intervensi ringkas (FRAMES) dan buku kecil maklumat</td></tr>
+        <tr><td><b>Tinggi</b></td><td class="c">≥27</td><td class="c">≥27</td><td>Intervensi ringkas, maklumat, rujukan penilaian dan rawatan pakar</td></tr>
+      </table></div>
+      <div class="info"><b>S8 (suntikan)</b> tidak dikira dalam skor. Suntikan dalam 3 bulan lepas: beri Kad Risiko Suntikan, intervensi ringkas dan rujukan saringan HIV, Hepatitis B dan C. Purata lebih 4 kali sebulan menandakan kebergantungan yang perlu penilaian lanjut.</div>
+      <div class="card"><h4>FRAMES: elemen intervensi ringkas</h4><ul>
+        <li><b>F</b>eedback: maklum balas risiko peribadi</li><li><b>R</b>esponsibility: tanggungjawab pesakit</li><li><b>A</b>dvice: nasihat untuk berubah</li><li><b>M</b>enu: pilihan cara mengurangkan penggunaan</li><li><b>E</b>mpathy: gaya kaunseling empati</li><li><b>S</b>elf-efficacy: keyakinan diri pesakit</li></ul></div>
+    </div>
+  </div>
+
+  <h3>Instrumen saringan lain</h3>
+  <div class="tw"><table>
+    <tr><th>Instrumen</th><th>Tujuan</th><th>Tafsiran / catatan</th></tr>
+    <tr><td><b>PHQ-9</b></td><td>Saringan dan tahap kemurungan</td><td>1–4 minimum · 5–9 ringan · 10–14 sederhana · 15–19 sederhana teruk · 20–27 teruk. Soalan 9 positif: nilai risiko bunuh diri.</td></tr>
+    <tr><td><b>GAD-7</b></td><td>Saringan dan tahap kebimbangan</td><td>0–4 minimum · 5–9 ringan · 10–14 sederhana · 15–21 teruk</td></tr>
+    <tr><td><b>Whooley</b></td><td>Saringan pantas kemurungan (2 soalan)</td><td>Mana-mana "Ya": teruskan dengan PHQ-9</td></tr>
+    <tr><td><b>AUDIT-10</b></td><td>Penggunaan alkohol</td><td>S1–3 penggunaan berbahaya · S4–6 kebergantungan · S7–10 penggunaan memudaratkan</td></tr>
+    <tr><td><b>WHOQOL-BREF</b></td><td>Kualiti hidup (fizikal, psikologi, sosial, persekitaran)</td><td>Dinilai pada 0, 6 dan 12 bulan. Sasaran: tren meningkat</td></tr>
+    <tr><td><b>URICA</b></td><td>Tahap kesediaan untuk berubah</td><td>Dilaksanakan oleh Pegawai Psikologi</td></tr>
+    <tr><td><b>OTI</b></td><td>Opiate Treatment Index</td><td>Saringan tahunan pesakit opioid</td></tr>
+    <tr><td><b>DASS / BSSK / SADPERSONS</b></td><td>Tekanan, kebimbangan, kemurungan, risiko bunuh diri</td><td>Mengikut keperluan klinikal</td></tr>
+  </table></div>
+
+  <h3>Ujian dadah dalam urin: tempoh pengesanan</h3>
+  <div class="tw"><table>
+    <tr><th>Dadah</th><th class="c">Separuh hayat</th><th class="c">Tempoh dikesan dalam urin</th></tr>
+    <tr><td>Methamphetamine</td><td class="c">6–15 jam</td><td class="c">1–4 hari</td></tr>
+    <tr><td>MDMA (ekstasi)</td><td class="c">4–12 jam</td><td class="c">1–3 hari</td></tr>
+    <tr><td>Amphetamine</td><td class="c">7–34 jam</td><td class="c">1–7 hari</td></tr>
+    <tr><td>Morfin</td><td class="c">1.3–6.7 jam</td><td class="c">1–3 hari</td></tr>
+    <tr><td>Midazolam</td><td class="c">31–97 jam</td><td class="c">1–2 hari</td></tr>
+    <tr><td>THC (kanabis)</td><td class="c">20–57 jam (jarang)<br>3–13 hari (kerap)</td><td class="c">1–45 hari</td></tr>
+  </table></div>
+  <div class="note">Urin negatif tetapi tanda fizikal positif: pertimbangkan inhalan atau NPS. Kanabis boleh kekal positif berminggu-minggu kerana larut lemak, jadi gunakan penilaian klinikal.</div>
+
+  <h3>Saringan tahunan pesakit OSCA</h3>
+  <div class="card"><p>ASSIST (juga setiap 6 bulan), AUDIT-10, WHOQOL, OTI, X-ray dada, ECG, FBS, FSL, RP, LFT, HBsAg, anti-HCV, ujian pantas HIV, saringan simptomatik TB, ujian urin dadah. Pesakit methadone dinilai sekurang-kurangnya setiap 3 bulan.</p></div>
+</section>
+
+<!-- ============ PENGESAHAN ============ -->
+<section class="pg" id="pengesahan">
+  <h2>Pengesahan Penagih (Borang 2)</h2>
+  <p class="lead">Di bawah Akta Penagih Dadah (Rawatan dan Pemulihan) (Pindaan) 2024 (Akta 283), pegawai perubatan kerajaan yang terlatih boleh mengesahkan status di mana-mana fasiliti yang ditetapkan tanpa perlu rujukan psikiatri.</p>
+  <div class="grid g2">
+    <div class="card"><h4>Penagih dadah atau bahan</h4><p>Menunjukkan ciri ketagihan yang menjejaskan kawalan kendiri, ditentusahkan melalui ujian. Setara <b>SUD teruk</b> (DSM-5).</p></div>
+    <div class="card"><h4>Penyalah guna dadah atau bahan</h4><p>Mengambil dadah atau bahan bukan untuk tujuan perubatan atau tanpa preskripsi sah. Menjalani <b>pengawasan dalam komuniti</b> (≤2 tahun), tanpa rekod jenayah jika patuh.</p></div>
+  </div>
+
+  <h3>Semakan kriteria DSM-5 SUD (dalam tempoh 12 bulan)</h3>
+  <div class="grid g2">
+    <div class="tool" id="dsm">
+      <label class="chk"><input type="checkbox"><div><div class="dom">Kawalan terjejas</div>Mengambil lebih banyak atau lebih lama daripada yang dirancang</div></label>
+      <label class="chk"><input type="checkbox"><div><div class="dom">Kawalan terjejas</div>Usaha mengurangkan atau mengawal tidak berjaya</div></label>
+      <label class="chk"><input type="checkbox"><div><div class="dom">Kawalan terjejas</div>Banyak masa untuk mendapatkan, menggunakan atau pulih</div></label>
+      <label class="chk"><input type="checkbox"><div><div class="dom">Kawalan terjejas</div>Gian atau keinginan kuat</div></label>
+      <label class="chk"><input type="checkbox"><div><div class="dom">Sosial</div>Gagal menunaikan tanggungjawab di kerja, rumah atau sekolah</div></label>
+      <label class="chk"><input type="checkbox"><div><div class="dom">Sosial</div>Terus guna walaupun ada masalah perhubungan</div></label>
+      <label class="chk"><input type="checkbox"><div><div class="dom">Sosial</div>Meninggalkan aktiviti sosial, pekerjaan atau rekreasi</div></label>
+      <label class="chk"><input type="checkbox"><div><div class="dom">Penggunaan berisiko</div>Guna berulang dalam situasi berbahaya</div></label>
+      <label class="chk"><input type="checkbox"><div><div class="dom">Penggunaan berisiko</div>Terus guna walaupun sedar masalah fizikal atau psikologi</div></label>
+      <label class="chk"><input type="checkbox"><div><div class="dom">Farmakologi</div>Toleransi</div></label>
+      <label class="chk" style="border-bottom:0"><input type="checkbox"><div><div class="dom">Farmakologi</div>Withdrawal (kecuali halusinogen)</div></label>
+      <div class="res" id="dsmRes"></div>
+    </div>
+    <div>
+      <div class="card"><h4>Rumusan prosedur pengesahan</h4><ol>
+        <li>Pemerhatian klinikal (resah, agresif atau terlalu mengantuk)</li>
+        <li>Pemeriksaan fizikal: pupil, tanda intoksikasi dan withdrawal</li>
+        <li>Interpretasi ujian saringan urin mengikut tempoh pengesanan</li>
+        <li>Kriteria DSM-5 untuk menentukan tahap kebergantungan</li>
+        <li>Lengkapkan Borang 2: penagih dadah, penagih bahan, penyalah guna dadah, penyalah guna bahan, atau bukan penagih/penyalah guna (boleh tanda lebih daripada satu)</li>
+      </ol></div>
+      <div class="card" style="margin-top:14px"><h4>Garis masa</h4><ul>
+        <li>AADK/PDRM maklumkan fasiliti sekurang-kurangnya <b>3 hari</b> sebelum temu janji</li>
+        <li>Suspek dibawa dalam tempoh <b>5 hari bekerja</b> selepas tangkapan</li>
+        <li>Kemasukan sukarela: lebih pantas, tiada rekod jenayah</li>
+      </ul></div>
+      <div class="card" style="margin-top:14px"><h4>Borang berkaitan (GP 2020, dikemas kini)</h4><ul>
+        <li>Borang Penilaian Penagih Dadah (Lampiran 2)</li>
+        <li>UPD1 Pindaan 2017: permintaan ujian urin</li>
+        <li>Borang 2: Perakuan Tentang Penagihan Dadah (Lampiran 3)</li>
+        <li>Borang Laporan Pegawai Agensi (C10/BR/02)</li>
+        <li>Borang 7: Perakuan Tentang Ketagihan Dadah, s.8(3) dan 9(2)</li>
+      </ul></div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ RAWATAN ============ -->
+<section class="pg" id="rawatan">
+  <h2>Rawatan &amp; Pengurusan</h2>
+  <p class="lead">Rawatan di OSCA bersifat biopsikososial dan spiritual, dengan rujukan ke pakar apabila perlu.</p>
+
+  <h3>Ubat-ubatan tersedia di OSCA</h3>
+  <div class="tw"><table>
+    <tr><th>Kategori</th><th>Ubat</th></tr>
+    <tr><td>Terapi gantian</td><td>Methadone; Buprenorphine/naloxone (Suboxone, item KPK)</td></tr>
+    <tr><td>Antipsikotik</td><td>Risperidone; Haloperidol (oral/IM); Olanzapine</td></tr>
+    <tr><td>Antidepresan</td><td>Fluvoxamine; Sertraline; Escitalopram</td></tr>
+    <tr><td>Benzodiazepin</td><td>Clonazepam 2 mg; Alprazolam 0.25 mg; Diazepam (tablet, supp, suntikan)</td></tr>
+    <tr><td>Lain-lain</td><td>Baclofen; Thiamine; Naloxone; HAART (HIV); DAA (Hepatitis C)</td></tr>
+  </table></div>
+
+  <h3>Ciri withdrawal mengikut substans</h3>
+  <div class="tw"><table>
+    <tr><th>Substans</th><th>Mula</th><th>Tempoh</th><th>Ciri klinikal</th></tr>
+    <tr><td>Opioid</td><td>Heroin/morfin &lt;24 jam; methadone/buprenorfin hari 3–5</td><td>Heroin memuncak hari 3, reda dalam seminggu; methadone lebih panjang</td><td>Mata dan hidung berair, berpeluh, resah, gian, kekejangan perut, cirit-birit, sakit sendi, loya</td></tr>
+    <tr><td>Stimulan (ATS, kokain, MDMA)</td><td>Crash: beberapa jam; withdrawal 1–4 hari</td><td>Akut 7–10 hari; subakut 2–4 minggu</td><td>Gian, disforia, anhedonia, selera meningkat, letih, tidur berlebihan, mimpi buruk</td></tr>
+    <tr><td>Ketamin</td><td>&lt;24 jam</td><td>4–6 hari</td><td>Gian, hilang selera, letih, menggigil, berpeluh, resah, murung, takikardia</td></tr>
+    <tr><td>GHB</td><td>&lt;12 jam</td><td>Sehingga 15 hari</td><td>Keliru, agitasi, paranoia, halusinasi, tremor, takikardia</td></tr>
+  </table></div>
+
+  <h3>Pencegahan relaps</h3>
+  <div class="grid g2">
+    <div class="card"><h4>Strategi khusus</h4><ul><li>Kenal pasti dan tangani situasi berisiko tinggi</li><li>Tingkatkan efikasi kendiri</li><li>Hapuskan mitos dan kesan plasebo</li><li>Penstrukturan semula kognitif: lapse sebagai kesilapan, bukan kegagalan</li></ul></div>
+    <div class="card"><h4>Strategi gaya hidup</h4><ul><li>Gaya hidup seimbang dan "ketagihan positif" (sukan, hobi)</li><li>Kawalan rangsangan: buang bekalan, elak pencetus</li><li>Pengurusan gian ("urge surfing")</li><li>Peta jalan relaps</li></ul></div>
+  </div>
+
+  <h3>Intervensi krisis</h3>
+  <div class="grid g2">
+    <div class="card"><h4>Langkah asas</h4><ol><li>Bercakap dengan nada tenang</li><li>Bawa pesakit ke ruang tenang dan selamat</li><li>Seorang anggota lain turut berada bersama</li><li>Beri peluang meluahkan perasaan</li><li>Dengar dengan empati</li><li>Jika tidak agresif, beri psikopendidikan dan cadangan</li></ol></div>
+    <div class="tw" style="align-self:start"><table>
+      <tr><th>Jenis krisis</th><th>Cadangan intervensi</th></tr>
+      <tr><td>Kewangan</td><td>Pegawai Kerja Sosial Perubatan; Majlis Agama Islam, Baitulmal, Tzu Chi; Pusat Khidmat ADUN/Parlimen</td></tr>
+      <tr><td>Tempat tinggal</td><td>Pegawai Kerja Sosial Perubatan; Majlis Agama Islam, Baitulmal, NGO</td></tr>
+      <tr><td>Interpersonal</td><td>Pegawai Psikologi</td></tr>
+      <tr><td>Hilang pekerjaan</td><td>Pegawai Kerja Sosial Perubatan</td></tr>
+      <tr><td>Tingkah laku agresif</td><td>GP Pengendalian Tingkah Laku Agresif di fasiliti kesihatan</td></tr>
+    </table></div>
+  </div>
+
+  <h3>Kumpulan khusus: ibu hamil</h3>
+  <div class="card"><p>Rujuk Pakar Perubatan Keluarga. Nasihatkan berhenti menggunakan dadah, bahan, nikotin dan alkohol. Langkah pengurangan kemudaratan: elakkan penyusuan 24–48 jam selepas penggunaan; bagi penggunaan tidak kerap, perah dan buang susu dahulu sebelum menyusu semula.</p></div>
+
+  <h3>Garis panduan rujukan</h3>
+  <div class="card"><ul style="columns:2;column-gap:28px">
+    <li>Polisi dan Prosedur Operasi Piawai Program Rawatan Methadone</li>
+    <li>GP Pengendalian Penyalahgunaan ATS dan Psikostimulan di Peringkat Primer dan Komuniti</li>
+    <li>Guidelines in the Management of Inhalant Abuse in Primary Care</li>
+    <li>GP Pengendalian Alkohol Dalam Komuniti (2013)</li>
+    <li>Drug Dependence Certification (2019)</li>
+    <li>GP Khidmat Berhenti Merokok di KK Edisi 2 (2022)</li>
+    <li>CPG Treatment of Tobacco Use Disorder (2016)</li>
+    <li>Guidelines for Management of Behavioural Addiction (2024)</li>
+    <li>Akta Dadah Berbahaya 1952; Akta 283 (Pindaan 2024)</li>
+  </ul></div>
+</section>
+
+<!-- ============ PASUKAN ============ -->
+<section class="pg" id="pasukan">
+  <h2>Pasukan &amp; Prasarana</h2>
+  <p class="lead">OSCA diketuai Pakar Perubatan Keluarga dan dijalankan oleh pasukan pelbagai disiplin.</p>
+  <h3>Senarai tugas petugas OSCA</h3>
+  <details class="acc"><summary>Pakar Perubatan Keluarga (FMS)</summary><div class="bd"><ul><li>Mengetuai pasukan pelbagai disiplin dan melatih anggota</li><li>Memastikan perkhidmatan biopsikososial dan spiritual menyeluruh, termasuk rawatan HIV, Hepatitis C dan TB</li><li>Menjalin kerjasama strategik dengan agensi luar</li><li>Merancang, memantau dan menilai perkhidmatan; rujukan klinikal pasukan</li><li>Mesyuarat berkala dan perbincangan kes</li><li>Memastikan ketepatan reten bulanan</li><li>Memastikan sumber manusia, prasarana dan pilihan rawatan mencukupi</li></ul></div></details>
+  <details class="acc"><summary>Pegawai Perubatan</summary><div class="bd"><ul><li>Sejarah menyeluruh pesakit baharu dan mulakan rawatan</li><li>Intervensi motivasi ringkas (FRAMES)</li><li>Saringan ASSIST, DASS, BSSK, TB, psikosis, kebimbangan dan kemurungan</li><li>Saringan tahunan; pesakit methadone dinilai sekurang-kurangnya setiap 3 bulan</li><li>Bincang semua kes baharu dan kes mencabar dengan FMS</li><li>Rujuk ke Pegawai Psikologi dan Kerja Sosial Perubatan; rawat penyakit lain</li><li>Menyelia PPP dan PPK; semak laporan dan rekod</li></ul></div></details>
+  <details class="acc"><summary>Pegawai Farmasi / Penolong Pegawai Farmasi</summary><div class="bd"><ul><li>Kaunseling ubat</li><li>Pemantauan dan pengurusan ubat</li><li>DOTS bila diperlukan</li><li>Rekod perkhidmatan farmasi</li></ul></div></details>
+  <details class="acc"><summary>Jururawat Terlatih / Penolong Pegawai Perubatan</summary><div class="bd"><ul><li>Triaj dan saringan awal; biometrik</li><li>ASSIST setiap 6 bulan; saringan tahunan (darah, ECG, X-ray dada); ujian urin</li><li>Kemas kini registri pesakit</li><li>Semak dan hantar reten OSCA/MMT bulanan ke JKN</li><li>Lawatan rumah bila perlu</li></ul></div></details>
+  <details class="acc"><summary>Pegawai Psikologi Kaunseling / Klinikal</summary><div class="bd"><ul><li>Penilaian URICA; ASSIST, WHOQOL, PHQ-9, GAD-7</li><li>Psikoterapi individu, terapi berkumpulan dan CBT</li><li>Kemahiran daya tindak dan keyakinan diri</li><li>Penilaian dan intervensi keluarga; psikopendidikan</li><li>Lawatan rumah</li></ul></div></details>
+  <details class="acc"><summary>Pegawai Kerja Sosial Perubatan</summary><div class="bd"><ul><li>Penilaian biopsikososial dan diagnosis sosial</li><li>Bantuan Terapi Sokongan dan Bantuan Praktikal mengikut Pelan Rawatan Sosial</li><li>Menyalurkan peluang pekerjaan, pendidikan dan bantuan perundangan</li><li>Lawatan rumah dan susulan komuniti</li></ul></div></details>
+  <details class="acc"><summary>Jurupulih Perubatan Carakerja</summary><div class="bd"><ul><li>Penilaian keupayaan bekerja dan ADL</li><li>Kemahiran sosial dan pemulihan vokasional (job readiness)</li><li>Pengurusan tekanan dan kemarahan</li><li>Jaringan majikan dan lawatan susulan tempat kerja</li></ul></div></details>
+  <details class="acc"><summary>Pembantu Perawatan Kesihatan dan Pengawal Keselamatan</summary><div class="bd"><ul><li>PPK: pendaftaran, biometrik, penghantaran spesimen, rekod dan fail, bekalan borang</li><li>Pengawal: keselamatan premis, kawal bilangan pesakit dan aktiviti berkumpulan, laporkan situasi mencurigakan</li></ul></div></details>
+
+  <h3>Keperluan ruang</h3>
+  <div class="grid g4">
+    <div class="card"><h4>Pendaftaran</h4><p>Kaunter utama</p></div>
+    <div class="card"><h4>Saringan</h4><p>Ruang biometri</p></div>
+    <div class="card"><h4>Spesimen</h4><p>Tandas pengambilan spesimen</p></div>
+    <div class="card"><h4>Konsultasi</h4><p>Bilik pelbagai disiplin (pakar, MO, psikologi, NGO)</p></div>
+    <div class="card"><h4>Rawatan</h4><p>Ambil darah, suntikan, ECG, daycare detoks</p></div>
+    <div class="card"><h4>Pendispensan</h4><p>Bilik/kaunter dan kaunseling ubat</p></div>
+    <div class="card"><h4>Terapi</h4><p>Bilik terapi kelompok/mesyuarat</p></div>
+    <div class="card"><h4>Rekod &amp; menunggu</h4><p>Almari berkunci; ruang menunggu khusus</p></div>
+  </div>
+  <div class="grid g2" style="margin-top:14px">
+    <div class="card"><h4>Peralatan klinikal</h4><p>Couch dan tirai, set BP, stetoskop, mesin ECG, oksigen, penimbang dan alat ukur tinggi, glucometer, pain score ruler. Bahan pakai buang: urine strip, glucose strip, tabung uji, picagari, kasa dan micropore.</p></div>
+    <div class="card"><h4>Pentadbiran dan keselamatan</h4><p>Komputer, pencetak dan pengimbas di kaunter, bilik konsultasi, rawatan dan ubat; talian telefon dan internet; bahan promosi; butang atau loceng kecemasan.</p></div>
+  </div>
+
+  <h3>Latihan yang diperlukan</h3>
+  <div class="grid g2">
+    <div class="card"><h4>Klinikal</h4><ul><li>Konsep ketagihan dan situasi dadah di Malaysia</li><li>Pengendalian rokok, arak, opiat, ATS, inhalan</li><li>Ketagihan tingkah laku (judi, seksual, internet)</li><li>Saringan: ASSIST, DASS, PHQ-9, GAD-7, SADPERSONS, URICA, WHOQOL, OTI, Mini-SIPS</li></ul></div>
+    <div class="card"><h4>Tingkah laku dan dokumentasi</h4><ul><li>Peringkat perubahan (Prochaska &amp; DiClemente)</li><li>Intervensi ringkas (FRAMES) dan Motivational Interviewing</li><li>Pengurusan marah, stres, agresif dan paranoia; pencegahan relaps</li><li>Buku pendaftaran, biometri, sejarah, ASSIST, pemeriksaan fizikal, reten</li></ul></div>
+  </div>
+
+  <h3>Rakan strategik</h3>
+  <div class="card"><p><b>Kerajaan:</b> AADK, PDRM, JKM, JAKIM/Jabatan Agama Islam, Majlis Agama Islam, Pusat Zakat, Baitulmal, Jabatan Pertanian, Jabatan Veterinar, Jabatan Tenaga Kerja, PERKESO. <b>NGO:</b> Persatuan Insaf Murni, PEMADAM, PENGASIH, Tzu Chi, PPP berdaftar. <b>Komuniti:</b> JKKK/JPKK, KOSPEN, Panel Penasihat Klinik Kesihatan, persatuan penduduk.</p></div>
+</section>
+
+<!-- ============ PELAPORAN ============ -->
+<section class="pg" id="pelaporan">
+  <h2>Pelaporan</h2>
+  <p class="lead">Semua kes OSCA direkod dan dilaporkan mengikut format BKP bagi pemantauan, penyelarasan rawatan dan pelaporan berkala.</p>
+  <div class="qa"><a class="btn pri" id="btnPortal2" target="_blank" rel="noopener">Portal OSCA</a><a class="btn" href="https://drive.google.com/file/d/1Hd0aeeuMrq8I1WB2JY056SJISdJKwDP8/view" target="_blank" rel="noopener">Format Reten OSCA (Jan–Jun 2025)</a></div>
+
+  <h3>Aliran dan jadual penghantaran</h3>
+  <div class="flow card">
+    <div class="step"><div class="n">1</div><div class="t"><b>OSCA di klinik kesihatan → PKD</b>Setiap bulan</div></div>
+    <div class="step"><div class="n">2</div><div class="t"><b>PKD → JKN Kedah (Unit NCD)</b>Setiap bulan</div></div>
+    <div class="step"><div class="n">3</div><div class="t"><b>JKN → Sektor Kawalan Produk Merokok, Alkohol dan Penyalahgunaan Substan, BKP</b>Setiap 6 bulan ke fctcmalaysia@moh.gov.my: <b>15 Julai</b> (Jan–Jun) dan <b>15 Januari</b> tahun berikutnya (Jul–Dis)</div></div>
+  </div>
+
+  <h3>Definisi status kes</h3>
+  <div class="tw"><table>
+    <tr><th>Status</th><th>Definisi</th></tr>
+    <tr><td><b>Baharu</b></td><td>Hadir atau dirujuk ke OSCA buat kali pertama dan belum pernah didaftarkan di fasiliti tersebut</td></tr>
+    <tr><td><b>Transfer in</b></td><td>Dipindahkan atau dirujuk masuk dari fasiliti lain untuk meneruskan rawatan</td></tr>
+    <tr><td><b>Aktif</b></td><td>Masih berdaftar dan menerima rawatan susulan mengikut pelan</td></tr>
+    <tr><td><b>Transfer out</b></td><td>Dirujuk ke fasiliti lain</td></tr>
+    <tr><td><b>Defaulter (cicir)</b></td><td>Tidak hadir dalam tempoh setahun selepas temu janji, walaupun telah cuba dikesan melalui telefon, surat atau lawatan rumah</td></tr>
+    <tr><td><b>Meninggal dunia</b></td><td>Disahkan meninggal semasa masih berdaftar sebagai kes aktif</td></tr>
+  </table></div>
+
+  <details class="acc" style="margin-top:14px"><summary>Pemboleh ubah dalam reten</summary><div class="bd"><p>Tahun dan bulan daftar, negeri, daerah, klinik, jenis kes, sumber kedatangan (temu janji OSCA, walk-in, KBM, methadone, hospital, AADK, PDRM, klinik swasta, PPP, outreach), nama, No. KP, MRN, tarikh lahir, umur, jantina, bangsa, alamat, telefon, pekerjaan, status perkahwinan, tarikh dirujuk, tarikh dan skor ASSIST, tahap ketagihan, jenis dadah, status penyakit mental, berjangkit dan NCD, jenis ubat, perlu rujukan, destinasi rujukan, status kes, catatan.</p></div></details>
+
+  <div class="grid g2">
+    <div class="card"><h4>Indikator proses</h4><ul><li>Bilangan pesakit dilihat</li><li>Ciri sosiodemografi dan jenis substans</li><li>Liputan saringan tahunan</li><li>Komorbiditi diurus di OSCA</li><li>Semua pesakit disusuli doktor sekurang-kurangnya setiap 3 bulan</li><li>Defaulter diintervensi</li></ul></div>
+    <div class="card"><h4>Indikator hasil</h4><ul><li>Skor ASSIST menurun</li><li>Penggunaan substans berkurang atau tiada</li><li>Tiada jangkitan baharu bawaan darah selepas menyertai OSCA</li><li>Skor WHOQOL meningkat</li><li>Kadar pengekalan (methadone)</li><li>Kekerapan ketagihan tingkah laku berkurang</li></ul></div>
+  </div>
+  <div class="note"><b>Masalah lazim yang dibangkitkan BKP:</b> reten lewat, reten dihantar kepada PIC lama, ASSIST kedua (selepas 6 bulan) tidak dikemas kini, dan format reten tidak seragam.</div>
+</section>
+
+<!-- ============ BAHAN ============ -->
+<section class="pg" id="bahan">
+  <h2>Bahan Latihan &amp; Slaid</h2>
+  <p class="lead">Semua slaid dibuka melalui Google Drive. Gunakan carian untuk mencari topik.</p>
+  <input class="search" id="q" type="search" placeholder="Cari tajuk, penceramah atau topik, contohnya ASSIST, ATS, Borang 2" aria-label="Cari bahan">
+  <div id="resWrap"></div>
+  <div class="empty" id="empty">Tiada bahan sepadan dengan carian.</div>
+</section>
+
+<!-- ============ DIREKTORI ============ -->
+<section class="pg" id="direktori">
+  <h2>Direktori</h2>
+  <p class="lead">Hubungan utama untuk rujukan dan penyelarasan OSCA di Negeri Kedah.</p>
+  <div class="grid g3">
+    <div class="card"><h4>Unit NCD, JKN Kedah</h4><p>Penyelaras OSCA negeri<br><a href="mailto:ncdjkn.kdh@moh.gov.my">ncdjkn.kdh@moh.gov.my</a><br>04-774 1000</p></div>
+    <div class="card"><h4>Sektor Kawalan Produk Merokok, Alkohol &amp; Penyalahgunaan Substan, BKP</h4><p><a href="mailto:fctcmalaysia@moh.gov.my">fctcmalaysia@moh.gov.my</a><br>03-8883 4418 / 4419</p></div>
+    <div class="card"><h4>Perkhidmatan Psikiatri Ketagihan</h4><p>Hospital Sultanah Bahiyah, Alor Setar (Pakar Psikiatri Ketagihan)</p></div>
+  </div>
+  <h3>AADK Daerah, Negeri Kedah</h3>
+  <div class="tw"><table>
+    <tr><th>AADK Daerah</th><th>Alamat</th><th>Telefon</th></tr>
+    <tr><td>Kota Setar &amp; Pokok Sena</td><td>Tingkat 2, Wisma Persekutuan, Jalan Kampung Baru, 05000 Alor Setar</td><td><a href="tel:047329160">04-732 9160</a></td></tr>
+    <tr><td>Padang Terap</td><td>No. 7, 8 &amp; 9, Kompleks Perniagaan Nagasari, 06300 Kedah</td><td>Sila sahkan*</td></tr>
+    <tr><td>Pendang</td><td>Lot 40, 41 &amp; 42, Jalan Bandar Baru 4, Pekan Tanah Merah, 06700 Pendang</td><td><a href="tel:047582242">04-758 2242</a></td></tr>
+    <tr><td>Yan</td><td>Kompleks Niaga Yan Kechil, 06900 Yan</td><td><a href="tel:044651000">04-465 1000</a></td></tr>
+    <tr><td>Sik</td><td>Tingkat 1, Bangunan Tabung Haji, Pekan Baru, 08200 Sik</td><td><a href="tel:044690400">04-469 0400</a></td></tr>
+    <tr><td>Kulim</td><td>No. 15-16, Lorong Impiana, Taman Lembah Impiana, 09000 Kulim</td><td><a href="tel:044969003">04-496 9003</a></td></tr>
+    <tr><td>Langkawi</td><td>Blok 1, Tingkat 3, Kompleks KDN Langkawi, Jalan Padang Matsirat, 07000 Langkawi</td><td><a href="tel:049693110">04-969 3110</a></td></tr>
+    <tr><td>Baling</td><td>No. 41 &amp; 42, Persisiran Kota 1/5, Kota Baling Jaya, 09100 Baling</td><td><a href="tel:044746184">04-474 6184</a></td></tr>
+    <tr><td>Kubang Pasu</td><td>No. 17 &amp; 18, Jalan Changlun, 06000 Jitra</td><td><a href="tel:049189401">04-918 9401</a></td></tr>
+    <tr><td>Kuala Muda</td><td>KM 9, Jalan Kuala Ketil, 08000 Sungai Petani</td><td><a href="tel:044202151">04-420 2151</a></td></tr>
+    <tr><td>Bandar Baharu</td><td>No. 7A, Kompleks Seri Tasik, 09800 Serdang</td><td><a href="tel:044070210">04-407 0210</a></td></tr>
+  </table></div>
+  <p style="font-size:13.5px;color:var(--ink2)">Sumber: Lampiran 6, Surat Pekeliling KPK Bil. 9/2026. *Nombor dalam lampiran sama dengan AADK Kota Tinggi, Johor; sila dapatkan nombor sebenar daripada AADK Negeri.</p>
+</section>
+
+</main>
+
+<footer><div class="in">Unit Kawalan Penyakit Tidak Berjangkit (NCD), Jabatan Kesihatan Negeri Kedah · Rujukan utama: Surat Pekeliling KPK Bil. 9/2026 dan bahan Bengkel Pengukuhan Pelaksanaan Perkhidmatan OSCA (KKM, Jun 2026). Hub ini ialah bahan rujukan dan tidak menggantikan garis panduan rasmi.</div></footer>
+
+<script>
+/* ===== Tetapan: masukkan pautan Portal OSCA di sini ===== */
+const PORTAL_OSCA_URL = "";
+
+const D = id => "https://drive.google.com/file/d/" + id + "/view";
+const F = id => "https://drive.google.com/drive/folders/" + id;
+const RES = [
+  { g: "Bengkel Pengukuhan Pelaksanaan Perkhidmatan OSCA (KKM)", sub: "22–23 Jun 2026 · Bahagian Kawalan Penyakit", items: [
+    ["pdf","Surat Pekeliling KPK Bil. 9/2026","Rujukan integrasi pesakit ketagihan antara agensi",D("1eel4DzM7XmITlh5_uLch_4G0ju1G8PI2")],
+    ["pdf","Reframing Addiction: A Primary Care Perspective & OSCA Transformation","Dr. Nor Hazlin Talib · Hari 1",D("1idOrQglcnG1pcK0lpl8P5lZJ-Y7sZ0lS")],
+    ["pdf","Hospital-based Addiction Psychiatry Service: What Role Does It Play?","Dr. Muhammad Ariff · Hari 1",D("1z74iUfeWj9B1a0gY4jsvicj6xpmBxRfv")],
+    ["pdf","Currently Available & Upcoming Clinical Guidelines","Dr. Norsuhana Sainal · Hari 1",D("1EfTYihFoulg68zi5JrzyQYDO4AEiaeZ7")],
+    ["pdf","Situasi Penyalahgunaan Dadah di Malaysia & Rasional OSCA","Dr. Nurhaliza Zakariah · Hari 1",D("15M-wp3DJ4LFHL4-Si-jjyyfr_Rb_-v0V")],
+    ["pdf","Pengurusan Perkhidmatan OSCA: Prasarana & Peralatan","Dr. Ahmad Afifuddin · Hari 1",D("18ne3SnJPc59tkvkV0qgX0ifUd_srUQrl")],
+    ["pdf","Senarai Tugas Petugas OSCA","Dr. Ahmad Afifuddin · Hari 1",D("1Nu8OIrlCbT0BDAIOQtfYuUn7GyQz3tW4")],
+    ["pdf","Pengurusan Pesakit & Kumpulan Khusus","Dr. Muhamad Hafiz Harun · Hari 1",D("1WImt4NPBPSBi42DdQ6HYRj2_sIYeBtGf")],
+    ["pdf","OSCA Assessment Form (Borang 01-2026)","Dr. Raihan Hassan · Hari 2",D("1Zp49kI78V6khQTWT1534wdKcTHhSzvn5")],
+    ["pdf","Assessment & Screening I: ASSIST","Dr. Muhamad Hafiz Harun · Hari 2",D("165Wa300ncZeW0o6X67nWp_izc0MvQBBh")],
+    ["pdf","Assessment & Screening II: WHOQOL, AUDIT-10, PHQ-9, GAD-7, UDT","Dr. Ahmad Afifuddin · Hari 2",D("1AAGda1N2V8vRGDtDfllFIOAOAHzIg7WT")],
+    ["pdf","Rujukan Integrasi Antara Agensi","Dr. Ainaa · Hari 2",D("13i-J06IaPzbTxeNB_EvND70SkA_ELOD8")],
+    ["pdf","Kriteria Kes Rawatan di OSCA & Rujukan","Dr. Nor Hazlin Talib · Hari 2",D("1BNWqreSOPvFLMYyFJwpQ7k3oac9-Swd1")],
+    ["pdf","Pelaporan OSCA & Rujukan Integrasi","Pn. Nor Asmidar Razali · Hari 2",D("1UXggLxUTKUythCvjN_9ne6NFCgJkBDUZ")],
+    ["pdf","Taklimat Pengesahan Penagih: Borang 2","Dr. Farhani Samat · Hari 2",D("1YxhhxuuKnbTUJp_Mks12FJQQHfhXi_J3")],
+    ["dir","Folder penuh bahan bengkel","Google Drive",F("1flRw-zmJnGOhWJqKGRCORFSsEaJpm9ne")]
+  ]},
+  { g: "Bengkel OSCA Negeri Kedah", sub: "Oktober 2025 · JKN Kedah", items: [
+    ["ppt","Concept of Addiction","Hari 1 · Slaid 1",D("10-FJMQSWbMX1jIhJrUyfA9QBWAxUIMWu")],
+    ["ppt","Amphetamine-Type Stimulants (ATS)","Hari 1 · Slaid 2",D("1O69nERsANDSlF7JfILlQ_MAltIR0yI4W")],
+    ["ppt","New Psychoactive Substances (NPS)","Hari 1 · Slaid 3",D("1VcUsG7tDQE2vg8S0MMDW9PoS23lxzhAR")],
+    ["ppt","Overview of Alcohol & Benzodiazepines Abuse","Hari 1 · Slaid 4",D("1Nq6UyLZ3iNfOSDc_-4NO7P2Kx0fgq7-_")],
+    ["pdf","Opioid & Inhalants Addiction","HSB · Hari 1 · Slaid 5",D("1C2WOExtbAjjjjhO12KpJspHlAwZoUgVQ")],
+    ["ppt","Introduction to Motivational Interviewing","Hari 1 · Slaid 6",D("1m_uY1lKzrudiD6UZibdeYbo8SoIRL6Y3")],
+    ["ppt","Relapse Prevention","Dr. Abdul Hafidz · Hari 1 · Slaid 7",D("1hoRwkURuBNSztCdUQo0zPiGuuNcJ3NLM")],
+    ["ppt","OSCA","Dr. Fazlin · Hari 2 · Slaid 8",D("1pypcgdoH74HGA73M5AchQ3pW6ORUbbEE")],
+    ["ppt","ASSIST-linked Brief Intervention","Hari 2 · Slaid 9",D("1Y5BE8nigRwcaf1DV3dQZS2caK2S-6p9k")],
+    ["vid","Video: ASSIST-linked Brief Intervention","Hari 2 · Slaid 4.1",D("1cqLdb50sFG3QkEA3R70P_GnZ4EiWoQGk")],
+    ["pdf","Halatuju OSCA Negeri Kedah","Unit NCD, JKN Kedah · Hari 2 · Slaid 10",D("1etsZOGcARm0Mr6EdpjptXPjJLwLIyaA3")],
+    ["dir","Folder Hari 1","Google Drive",F("1fB3cSN1HMATEnZp6BX6DqvIarvZN_PaG")],
+    ["dir","Folder Hari 2","Google Drive",F("1mPR_FFOmEKSunacaxS6nBdp8ouee4sAV")]
+  ]}
+];
+const LBL = {pdf:"PDF",ppt:"PPT",vid:"VIDEO",dir:"FOLDER",xls:"XLS"};
+const esc = s => s.replace(/[&<>"]/g, c => ({"&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;"}[c]));
+function renderRes(term){
+  const t = (term||"").trim().toLowerCase(); let html = "", n = 0;
+  RES.forEach(grp => {
+    const its = grp.items.filter(i => !t || (i[1]+" "+i[2]+" "+grp.g).toLowerCase().includes(t));
+    if(!its.length) return; n += its.length;
+    html += `<div class="grp"><h3>${esc(grp.g)}</h3><span class="pill">${esc(grp.sub)}</span></div><div class="res-list">` +
+      its.map(i => `<a class="ri" href="${i[3]}" target="_blank" rel="noopener"><div class="ty ${i[0]}">${LBL[i[0]]}</div><div class="tx"><b>${esc(i[1])}</b><span>${esc(i[2])}</span></div></a>`).join("") + "</div>";
+  });
+  document.getElementById("resWrap").innerHTML = html;
+  document.getElementById("empty").style.display = n ? "none" : "block";
+}
+document.getElementById("q").addEventListener("input", e => renderRes(e.target.value));
+renderRes("");
+
+/* Portal OSCA buttons */
+["btnPortal","btnPortal2"].forEach(id => {
+  const b = document.getElementById(id);
+  if (PORTAL_OSCA_URL) { b.href = PORTAL_OSCA_URL; }
+  else { b.classList.add("dis"); b.removeAttribute("target"); b.textContent = "Portal OSCA (pautan akan dikemas kini)"; b.addEventListener("click", e => e.preventDefault()); }
+});
+
+/* Tabs */
+const pages = [...document.querySelectorAll("section.pg")], links = [...document.querySelectorAll("#tabs a")];
+function show(){
+  const id = (location.hash || "#utama").slice(1);
+  const pg = document.getElementById(id) ? id : "utama";
+  pages.forEach(p => p.classList.toggle("on", p.id === pg));
+  links.forEach(a => { const on = a.getAttribute("href") === "#"+pg; a.classList.toggle("on", on); if(on){ const c=a.parentElement; c.scrollLeft = a.offsetLeft - (c.clientWidth - a.offsetWidth)/2; } });
+  setTimeout(() => window.scrollTo(0, 0), 0);
+}
+window.addEventListener("hashchange", show); window.addEventListener("load", show); show();
+
+/* ASSIST calculator */
+const sub = document.getElementById("aSub"), qs = [...document.querySelectorAll(".aq")];
+function calcA(){
+  const tob = sub.value === "tob", alc = sub.value === "alc";
+  document.getElementById("q5w").style.display = tob ? "none" : "block";
+  let s = 0; qs.forEach(q => { if (tob && q.id === "q5") return; s += +q.value; });
+  const lo = alc ? 10 : 3, cls = s <= lo ? "lo" : s <= 26 ? "md" : "hi";
+  const lvl = {lo:"Risiko rendah",md:"Risiko sederhana",hi:"Risiko tinggi"}[cls];
+  const act = {lo:"Nasihat kesihatan am.",md:"Intervensi ringkas (FRAMES) dan buku kecil maklumat.",hi:"Intervensi ringkas, maklumat, dan rujukan untuk penilaian serta rawatan pakar."}[cls];
+  const r = document.getElementById("aRes"); r.className = "res " + cls;
+  r.innerHTML = `<div class="sc">${s}</div><b>${lvl}</b><div style="margin-top:4px;font-size:14.5px">${act}</div>`;
+}
+sub.addEventListener("change", calcA); qs.forEach(q => q.addEventListener("change", calcA)); calcA();
+
+/* DSM-5 checklist */
+const cbs = [...document.querySelectorAll("#dsm input")];
+function calcD(){
+  const n = cbs.filter(c => c.checked).length, r = document.getElementById("dsmRes");
+  let cls="lo", t="Tidak memenuhi kriteria SUD (kurang daripada 2)", s2="Pertimbangkan sama ada penyalah guna, berdasarkan ujian dan sejarah.";
+  if (n>=2 && n<=3){cls="md";t="SUD ringan";s2="Klasifikasi: penyalah guna dadah atau bahan.";}
+  else if (n>=4 && n<=5){cls="md";t="SUD sederhana";s2="Klasifikasi: penyalah guna dadah atau bahan.";}
+  else if (n>=6){cls="hi";t="SUD teruk";s2="Klasifikasi: penagih dadah atau bahan.";}
+  r.className = "res " + cls;
+  r.innerHTML = `<div class="sc">${n}/11</div><b>${t}</b><div style="margin-top:4px;font-size:14.5px">${s2} Keputusan akhir berdasarkan penilaian klinikal penuh.</div>`;
+}
+cbs.forEach(c => c.addEventListener("change", calcD)); calcD();
+</script>
+</body>
+</html>
